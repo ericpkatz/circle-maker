@@ -4,7 +4,11 @@ const sizeSelect = document.querySelector('#size-select');
 const container = document.querySelector('#container');
 
 container.addEventListener('click', (ev)=> {
-  ev.target.parentNode.removeChild(ev.target);
+  if(ev.target.id !== 'container'){
+    ev.target.parentNode.removeChild(ev.target);
+  }
+  
+
 });
 button.addEventListener('click', ()=> {
   const color = colorSelect.value;
